@@ -36,7 +36,7 @@ public class BoardController implements BoardUI {
     private void initializeGame() {
         Board newBoard = new BoardImpl(this);
         humanPlayer = new HumanPlayer(newBoard);
-        aiPlayer = new AiPlayer(newBoard);
+        aiPlayer = new AIPlayer(newBoard);
     }
 
     public void initialize() {
@@ -109,7 +109,7 @@ public class BoardController implements BoardUI {
             case EMPTY:
                 lblStatus.setText("Game is tied !");
         }
-        if (winner.getWinningPiece() != Piece.EMPTY) {
+        if (winner.getWinningPiece() != CubeColor.EMPTY) {
             VBox vCol = (VBox) grpCols.lookup("#col" + winner.getCol1());
             Rectangle rect = new Rectangle((winner.getCol2() - winner.getCol1() + 1) * vCol.getWidth(),
                     (winner.getRow2() - winner.getRow1() + 1) * (((RADIUS + 2) * 2)));
