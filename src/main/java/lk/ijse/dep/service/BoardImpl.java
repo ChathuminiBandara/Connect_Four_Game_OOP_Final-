@@ -37,7 +37,7 @@ public class BoardImpl implements Board{
     @Override
     public boolean existLegalMoves() {
         for (int i=0; i<6; i++) {
-            if (isLegalMove(i) == true) {
+            if (isLegalMove(i)) {
                 return true;
             }
         }
