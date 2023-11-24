@@ -1,5 +1,4 @@
 package lk.ijse.dep.service;
-
 public class BoardImpl implements Board{
     private static CubeColor[][] pieces = new CubeColor[NUM_OF_COLS][NUM_OF_ROWS];
     private BoardUI boardUI;

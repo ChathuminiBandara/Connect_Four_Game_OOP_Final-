@@ -59,3 +59,4 @@ public class Winner {
         this.row2 = row2;
     }
 }
+
